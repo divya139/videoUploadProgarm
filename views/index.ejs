@@ -3,19 +3,14 @@
     <head>
     </head>
     <body>
-        <form method="POST" enctype="multipart/form-data">
-            <input type="file" name="myImage"/>
-            <input type="submit" name="Submit" value="submit">
-            <form method="/getPictures" enctype="multipart/form-data" value="Pictures">
-            <input type="button" name="Get Pictures" onclick="">
-            <ul class="images">
-                <% for(var i = 0;i < images.length ;i++){ %>
-                <li class="image">
-                   <img src="uploads/"+<%=images[i].originalname%>>
-    
-               <% } %>
-                </ul>
-            </form>
+        <form method="POST" action="/images" enctype="multipart/form-data">
+            <input type="file" name="myImage" accept=".mp4"/>
+            <button type="submit">Submit</button>
+           
         </form>
+        <form action="/images" method="GET">
+
+        </form>
+       
     </body>
 </html>
