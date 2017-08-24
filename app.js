@@ -62,17 +62,18 @@ app.get("/",function(req,res,next){
 app.post("/images", upload.any(),function(req,res,next){
     createThumbnail("C:/Users/User/videoUploadProgram/public/uploads/"+imgPath, imgPath.replace(".mp4",".jpg") ,"public/uploads");
    
-    console.log();    
+    console.log();  
+    res.render("/")  
    //res.send(req.files);
 
   
-   insertQuotes(req,res);
+  // insertQuotes(req,res);
  
 
 });
 app.get("/images",function(res,req,next){
     //res.send()
-    getQuotes(res,req);
+    //getQuotes(res,req);
 });
 
 /* function getQuotes(req,res)
